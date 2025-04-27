@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Task Manager</h1>
+
+<div id="tasks">
+    <div id="loader"> Loading tasks...</div> 
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="modal" id="editModal">
+  <div class="modal-content">
+        <h2>Edit Task</h2>
+        <form id="editForm" >
+            <input type="text" id="editTitle" placeholder="Task Title" required>
+            <select id="editStatus">
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <div class="modal-buttons">
+                <button type="submit" class="save-btn">Save</button>
+                <button  type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
